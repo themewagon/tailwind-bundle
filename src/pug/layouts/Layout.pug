@@ -1,0 +1,90 @@
+//- ===============================================
+//-     Global  Variables
+//- ===============================================
+block variables
+  - var CWD = '';
+  - var attrsHtml = { lang: `${ dir === 'rtl' ? 'ar' : 'en-US'}`, dir: dir || 'ltr' };
+  - var title = '50 tailwind CSS website template';
+  - var attrsBody = {};
+  - var attrsMain = {};
+  - var attrsLayout = {};
+  - var APIGmap = 'AIzaSyDbaQGvhe7Af-uOMJz68NWHnO34UjjE7Lo';
+
+
+//- ===============================================
+//-     Basic Modules
+//- ===============================================
+
+
+doctype html
+html&attributes(attrsHtml)
+  head
+    block meta
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+
+
+    = '\n\n'
+    // ===============================================
+    //    Document Title
+    // ===============================================
+    title=title
+
+
+    = '\n\n'
+    // ===============================================
+    //    Favicons
+    // ===============================================
+    block favicon
+      link(rel="apple-touch-icon" sizes="180x180", href=`${CWD}assets/img/favicons/apple-touch-icon.png`)
+      link(rel="icon" type="image/png" sizes="16x16", href=`${CWD}assets/img/favicons/favicon-16x16.png`)
+      link(rel="manifest", href=`${CWD}assets/img/favicons/manifest.json`)
+      meta(name='msapplication-TileImage', content=`${CWD}assets/img/favicons/mstile-150x150.png`)
+      meta(name="theme-color" content="#ffffff")
+
+
+    block headScripts
+
+    = '\n\n'
+    // ===============================================
+    //    Stylesheets
+    // ===============================================
+
+    block styles
+      +ThemeStyle
+
+  = '\n\n'
+  body()&attributes(attrsBody)
+
+    block beforeMainContent
+
+    = '\n'
+    // ===============================================
+    //    Main Content
+    // ===============================================
+    main()&attributes(attrsMain)
+      //- p=JSON.stringify(pageTree,null,2)
+      block mainContent
+    // ===============================================
+    //    End of Main Content
+    // ===============================================
+    = '\n\n'
+
+
+    block afterMainContent
+
+    = '\n\n'
+    // ===============================================
+    //    JavaScripts
+    // ===============================================
+
+
+
+    script(src=`${CWD}vendors/hummingbird/hummingbird.min.js`)
+
+    block layoutScripts
+
+    = '\n'
+
+    block footerStyles

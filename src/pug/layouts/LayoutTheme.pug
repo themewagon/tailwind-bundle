@@ -1,0 +1,41 @@
+extends Layout
+include ../mixins/common/Footer
+include ../mixins/Variables
+
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+  - var attrsHtml = Object.assign(attrsHtml, { 'data-navigation-type': "default", 'data-navbar-horizontal-shape': "default" })
+  - var attrsNavbarTop = {}
+  - var attrsNavbarVertical = {}
+
+append headScripts
+  script.
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches);
+  script(src=`${CWD}assets/js/config.js`)
+
+block styles
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  link(href=`${CWD}assets/css/tailwind.css`, type="text/css" rel='stylesheet')
+  script.
+    var phoenixIsRTL = window.config.config.phoenixIsRTL;
+    if(phoenixIsRTL) {
+      var linkDefault = document.getElementById('style-default');
+      var userLinkDefault = document.getElementById('user-style-default');
+      linkDefault?.setAttribute('disabled', true);
+      userLinkDefault?.setAttribute('disabled', true);
+      document.querySelector('html').setAttribute('dir', 'rtl');
+    } else {
+      var linkRTL= document.getElementById('style-rtl');
+      var userLinkRTL= document.getElementById('user-style-rtl');
+      linkRTL?.setAttribute('disabled', true);
+      userLinkRTL?.setAttribute('disabled', true);
+    }
+
+
+block mainContent
+//-     +LayoutContent

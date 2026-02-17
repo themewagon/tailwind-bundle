@@ -1,0 +1,7 @@
+mixin ItemCard(props)
+
+  div(class="card bg-white hover:border-[#9EE970] border-[#F0F0F0] rounded-2xl shadow-2xl shadow-[#B9C1B31A] overflow-hidden")
+    .card-body.text-center
+      p(class="card-title font-semibold m-0 text-md lg:text-lg")=props.title
+    img.card-img-bottom(src=`${CWD}assets/img/items/${props.img}`  alt="Feature")
+

@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+@import '@hummingbirdui/hummingbird';
+@import '@hummingbirdui/hummingbird/src/plugins/choices.css';
+@custom-variant dark (&:where([data-hb-theme=dark], [data-hb-theme=dark] *), [data-hb-theme=dark]);
+@custom-variant active (&:active, &.active);
+@import './theme.css';
+@import './mixed.css';
+
+.bg-holder {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    will-change: transform, opacity, filter;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    width: 100%;
+    position: relative;
+}

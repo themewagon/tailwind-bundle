@@ -1,0 +1,6 @@
+{
+  "@hummingbirdui/hummingbird": {
+    "src": ["dist/hummingbird.min.js", "dist/hummingbird.min.js.map"],
+    "dest": "hummingbird"
+  }
+}

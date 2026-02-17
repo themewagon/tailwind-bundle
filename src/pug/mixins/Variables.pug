@@ -1,0 +1,266 @@
+append variables
+  - var title = 'Showcase | 50 tailwind CSS website templates';
+  - var theme = `${name}-${version}`;
+  - var bootstrapVersion = '5.3';
+  - var attrsMain = { id: 'top', class: 'main' };
+  - var attrsLayout = { class: '', 'data-layout': ENV === 'PROD' ? 'container' : false }
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger'];
+  - var grays = [ '1100', 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100];
+  - var colorsAll = colors.concat(grays);
+  - var footer = true;
+  - var pathName = (locals.filename || locals.history[0]).split('\\').join('/').split('src/pug/').pop().split('.pug').shift();
+  - var pageTree = pathName.split('/');
+  - var CWD = pageTree.slice(1).map(() => '../').join('');
+  - 
+    var data = [
+            {
+                title: 'Eliana',
+                preview: 'https://themewagon.github.io/eliana-nextjs/',
+                img:'Eliana.png'
+            },
+            {
+                title: 'Material',
+                preview: 'https://themewagon.github.io/material-tailwind-dashboard-react/',
+                img:'Material.png'
+            },
+            {
+                title: 'Material Shadcn',
+                preview: 'https://themewagon.github.io/material-shadcn/',
+                img:'MaterialShadcn.png'
+            },
+            {
+                title: 'admin',
+                preview: 'https://themewagon.github.io/admin/',
+                img:'Admin.png'
+            },
+            {
+                title: 'K-WD Dashboard',
+                preview: 'https://themewagon.github.io/k-wd-dashboard/',
+                img:'K-WD Dashboard.png'
+            },
+            {
+                title: 'Landmark',
+                preview: 'https://themewagon.github.io/landmark/',
+                img:'Landmark.png'
+            },
+            {
+                title: 'Landwind',
+                preview: 'https://themewagon.github.io/landwind/',
+                img:'Landwind.png'
+            },
+            {
+                title: 'PinWheel',
+                preview: 'https://themewagon.github.io/pinwheel/',
+                img:'PinWheel.png'
+            },
+            {
+                title: 'Chef\'s Kitchen',
+                preview: 'https://themewagon.github.io/chefs-kitchen-nextjs-free/',
+                img:'Chef’sKitchen.png'
+            },
+            {
+                title: 'DesgySolution',
+                preview: 'https://themewagon.github.io/Desgy/',
+                img:'DesgySolutions.png'
+            },
+            {
+                title: 'MatDash',
+                preview: 'https://themewagon.github.io/MatDash/',
+                img:'MatDash.png'
+            },
+            {
+                title: 'Inazuma',
+                preview: 'https://themewagon.github.io/inazuma-tailwind/',
+                img: 'Inazuma.png'
+            },
+            {
+                title: 'WindMill',
+                preview: 'https://themewagon.github.io/windmill-saas/',
+                img: 'WindMill.png'
+            },
+            {
+                title: 'eLearning',
+                preview: 'https://themewagon.github.io/E-learning/',
+                img: 'E-Learning.png'
+            },
+            {
+                title: 'Cleopatra',
+                preview: 'https://themewagon.github.io/cleopatra-tailwind/',
+                img: 'Cleopatra.png'
+            },
+            {
+                title: 'DattaAble',
+                preview: 'https://themewagon.github.io/DattaAble/dashboard/index.html',
+                img: 'DattaAble.png'
+            },
+            {
+                title: 'Crypgo',
+                preview: 'https://themewagon.github.io/Crypgo/',
+                img: 'Crypgo.png'
+            },
+            {
+                title: 'ArgonDashboard',
+                preview: 'https://themewagon.github.io/argon-dashboard-tailwind/',
+                img: 'ArgonDashboard.png'
+            },
+            {
+                title: 'MaterialTailwind',
+                preview: 'https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/',
+                img: 'MaterialTailwind.png'
+            },
+            {
+                title: 'SoftUI',
+                preview: 'https://themewagon.github.io/Soft-UI-Dashboard-Tailwind/pages/dashboard.html',
+                img: 'SoftUI.png'
+            },
+            {
+                title: 'Notus',
+                preview: 'https://themewagon.github.io/Notus-Next.js/admin/dashboard',
+                img: 'Notus.png'
+            },
+            {
+                title: 'Material-Tailwind',
+                preview: 'https://themewagon.github.io/NextJS-Tailwind-Course-Landing-Page/',
+                img: 'Material-Tailwind.png'
+            },
+            {
+                title: 'Material',
+                preview: 'https://themewagon.github.io/NextJS-Tailwind-App-Presentation-Page/',
+                img: 'Material.png'
+            },
+            {
+                title: 'Picto',
+                preview: 'https://themewagon.github.io/picto/',
+                img: 'Picto.png'
+            },
+            {
+                title: 'Windster',
+                preview: 'https://themewagon.github.io/windster/',
+                img: 'Windster.png'
+            },
+            {
+                title: 'Nextly',
+                preview: 'https://themewagon.github.io/nextly/',
+                img: 'Nextly.png'
+            },
+            {
+                title: 'Sassland',
+                preview: 'https://themewagon.github.io/saasland/',
+                img: 'Sassland.png'
+            },
+            {
+                title: 'CryptoFlow',
+                preview: 'https://themewagon.github.io/cryptoflow/',
+                img: 'CryptoFlow.png'
+            },
+            {
+                title: 'Base',
+                preview: 'https://themewagon.github.io/Base-Tailwind/',
+                img: 'Base.png'
+            },
+            {
+                title: 'Play',
+                preview: 'https://themewagon.github.io/play-tailwind/',
+                img: 'Play.png'
+            },
+            {
+                title: 'Startup',
+                preview: 'https://themewagon.github.io/startup-nextjs/',
+                img: 'Startup.png'
+            },
+            {
+                title: 'Flora&Fauna',
+                preview: 'https://themewagon.github.io/FaunaFlora/',
+                img: 'Flora&Fauna.png'
+            },
+            {
+                title: 'Crypto',
+                preview: 'https://themewagon.github.io/crypto-nextjs/',
+                img: 'Crypto.png'
+            },
+            {
+                title: 'Dsign',
+                preview: 'https://themewagon.github.io/dSign/',
+                img: 'Dsign.png'
+            },
+            {
+                title: 'TailAdmin',
+                preview: 'https://themewagon.github.io/tailadmin-vuejs/',
+                img: 'TailAdmin.png'
+            },
+            {
+                title: 'Resume',
+                preview: 'https://themewagon.github.io/Resume-Nextjs/',
+                img: 'Resume.png'
+            },
+            {
+                title: 'Sustainable',
+                preview: 'https://themewagon.github.io/sustainable-nextjs/',
+                img: 'Sustainable.png'
+            },
+            {
+                title: 'Venus',
+                preview: 'https://themewagon.github.io/venus-nextjs/',
+                img: 'Venus.png'
+            },
+            {
+                title: 'Property',
+                preview: 'https://themewagon.github.io/property-nextjs/',
+                img: 'Property.png'
+            },
+            {
+                title: 'Symposium',
+                preview: 'https://themewagon.github.io/symposium-nextjs/',
+                img: 'Symposium.png'
+            },
+            {
+                title: 'Pixelize',
+                preview: 'https://themewagon.github.io/Pixelize/',
+                img: 'Pixelize.png'
+            },
+            {
+                title: 'Si',
+                preview: 'https://themewagon.github.io/si-education/',
+                img: 'Si.png'
+            },
+            {
+                title: 'Geeky',
+                preview: 'https://themewagon.github.io/geeky-nextjs/',
+                img: 'Geeky.png'
+            },
+            {
+                title: 'Paidin',
+                preview: 'https://themewagon.github.io/paidin/',
+                img: 'Paidin.png'
+            },
+            {
+                title: 'Windmill',
+                preview: 'https://themewagon.github.io/windmill-dashboard/',
+                img: 'Windmill-Admin.png'
+            },
+            {
+                title: 'Landing',
+                preview: 'https://themewagon.github.io/Landing-react/',
+                img: 'Landing.png'
+            },
+            {
+                title: 'Pixels',
+                preview: 'https://themewagon.github.io/pixels-nextjs/',
+                img: 'Pixels.png'
+            },
+            {
+                title: 'Genesis',
+                preview: 'https://themewagon.github.io/genesis-nextjs/',
+                img: 'Genesis.png'
+            },
+            {
+                title: 'DentalPro',
+                preview: 'https://themewagon.github.io/dental-pro/',
+                img: 'DentalPro.png'
+            },
+            {
+                title: 'Typefolio',
+                preview: 'https://themewagon.github.io/Typefolio/',
+                img: 'Typefolio.png'
+            },
+        ]

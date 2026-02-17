@@ -1,0 +1,186 @@
+/*-----------------------------------------------
+|   Reboot
+-----------------------------------------------*/
+
+:root {
+  --body-bg: var(--background-color-body);
+  --body-color: var(--text-color-body);
+  --body-line-height: var(--leading-base);
+}
+th {
+  @apply font-extrabold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @layer base {
+    @apply text-(--text-color-body-emphasis);
+  }
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+[id] {
+  scroll-margin-top: calc(var(--navbar-top-height) + var(--scroll-margin-top));
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 1 !important;
+}
+
+pre,
+code {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+section {
+  @layer base {
+    position: relative;
+    padding-top: --spacing(10);
+    padding-bottom: --spacing(10);
+
+    @variant lg {
+      padding-top: --spacing(14);
+      padding-bottom: --spacing(14);
+    }
+  }
+}
+
+input,
+button,
+select,
+optgroup,
+textarea,
+label,
+.alert,
+.badge,
+.blockquote-footer,
+.btn,
+.navbar,
+.pagination,
+.valid-feedback,
+.invalid-feedback {
+  font-family: var(--font-sans-serif); /* TODO: Need to update the variable */
+}
+
+pre {
+  @layer base {
+    margin: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+strong {
+  @layer base {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+label {
+  @layer base {
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+pre,
+code,
+kbd,
+samp {
+  @layer base {
+    font-size: 14px;
+  }
+}
+
+[type='search'] {
+  -webkit-appearance: none;
+}
+
+.min-h-auto {
+  min-height: auto;
+}
+.content-min-h {
+  min-height: calc(100vh - 10rem);
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+.stack-icon-item {
+  margin-top: 1px;
+}
+.top-1 {
+  top: 1px;
+}
+
+input {
+  &:-webkit-autofill {
+    -webkit-text-fill-color: var(--body-color);
+    box-shadow: 0 0 0 30px var(--background-color-body-emphasis) inset;
+  }
+}
+input::-webkit-contacts-auto-fill-button {
+  background-color: var(--text-color-body);
+}
+
+.bg-opacity-15 {
+  /* --#{phoenix}-bg-opacity: 0.15; TODO: Check and update */
+}
+
+.border-end-solid-xxl {
+  @variant 2xl {
+    border-right-style: solid !important;
+  }
+}
+a {
+  @layer base {
+    @apply no-underline;
+    &:hover {
+      @apply underline;
+    }
+  }
+}
+
+svg {
+  @layer base {
+    @apply inline;
+  }
+}
+
+img {
+  @layer base {
+    @apply inline;
+  }
+}
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  @layer base {
+    @apply border-base;
+  }
+}
+
+small {
+  @layer base {
+    font-size: 75%;
+  }
+}
